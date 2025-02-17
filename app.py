@@ -88,9 +88,6 @@ if min_stocks_with_subsektor:
 else:
     st.write("Tidak ada saham untuk dibandingkan dalam subsektor yang sama.")
 
-st.subheader("📊 Perbandingan Saham di Luar Subsektor")
-st.dataframe(create_result_df(min_stocks_without_subsektor, details_without_subsektor))
-
 # === Perhitungan Value at Risk (VaR) ===
 st.header("📉 Perhitungan Value at Risk (VaR)")
 
