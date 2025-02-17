@@ -1,3 +1,6 @@
+pip install datetime
 pandas
 numpy
 yfinance
+datetime
+timedelta
