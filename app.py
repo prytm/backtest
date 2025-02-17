@@ -15,14 +15,8 @@ target_mc = st.sidebar.number_input("Market Cap Target", value=2793937500000)
 target_roe = st.sidebar.number_input("RoE Target (%)", value=130.73)
 target_subsektor = st.sidebar.text_input("Subsektor Target", value="Basic Materials")
 
-# Upload file untuk comparison_table
-uploaded_file = st.sidebar.file_uploader("Upload File Data Saham (CSV)", type=["csv"])
-if uploaded_file is not None:
-    final_df = pd.read_csv(uploaded_file)
-    comparison_table = pd.DataFrame(final_df)
-else:
-    st.warning("Silakan upload file CSV untuk melanjutkan.")
-    st.stop()
+final_df = pd.read_csv('final_df', delimiter = ',')
+comparison_table = pd.DataFrame(final_df)
 
 # Fungsi untuk menghitung persentase perbedaan
 def calculate_percentage(filtered_table):
