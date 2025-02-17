@@ -16,7 +16,8 @@ st.title("Analisis Perbandingan Saham dengan Persentase & VaR")
 
 # Input kode saham (hanya ini yang perlu dimasukkan)
 st.sidebar.header("Input Saham Target")
-stock_list = final_df['Kode'].unique().tolist().sort()
+stock_list = final_df['Kode'].unique().tolist()
+stock_list = stock_list.sort()
 target_stock = st.sidebar.selectbox("Pilih Kode Saham", stock_list)
 
 # Ambil data target secara otomatis
