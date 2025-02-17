@@ -15,7 +15,7 @@ target_mc = st.sidebar.number_input("Market Cap Target", value=2793937500000)
 target_roe = st.sidebar.number_input("RoE Target (%)", value=130.73)
 target_subsektor = st.sidebar.text_input("Subsektor Target", value="Basic Materials")
 
-final_df = pd.read_csv('final_df', delimiter = ',')
+final_df = pd.read_csv('final_df.csv', delimiter = ',')
 comparison_table = pd.DataFrame(final_df)
 
 # Fungsi untuk menghitung persentase perbedaan
